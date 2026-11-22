@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', system-ui, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #070b14;
+    color: #f1f5f9;
+    user-select: none;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono-data {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes portalSpin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.04);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes holoPulse {
+  0%, 100% {
+    opacity: 0.72;
+  }
+  50% {
+    opacity: 0.96;
+  }
+}
+
+@keyframes fadeInBanner {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -8px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes cutInSlide {
+  from {
+    opacity: 0;
+    transform: translate3d(-18px, 10px, 0) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes bubblePop {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 8px, 0) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 3.6s ease-in-out infinite;
+}
+
+.animate-portal-spin {
+  animation: portalSpin 14s linear infinite;
+}
+
+.animate-holo-pulse {
+  animation: holoPulse 2.8s ease-in-out infinite;
+}
+
+.animate-fade-in {
+  animation: fadeInBanner 0.36s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-cutin-enter {
+  animation: cutInSlide 0.32s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-bubble-pop {
+  animation: bubblePop 0.22s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-slow,
+  .animate-portal-spin,
+  .animate-holo-pulse,
+  .animate-fade-in,
+  .animate-cutin-enter,
+  .animate-bubble-pop {
+    animation: none;
+  }
+}

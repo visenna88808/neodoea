@@ -1,0 +1,8 @@
+{
+  "name": "Remix Misteri Portal Neo-Metropolis",
+  "description": "Game petualangan naratif 2D bergaya anime tentang misteri perubahan sosial, globalisasi, dan literasi digital di Neo-Metropolis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
